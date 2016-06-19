@@ -1,0 +1,9 @@
+<tabs class="col-md-12 max-height" (menuSelect)="desktop.pushTab($event)" (closeTab)="desktop.closeTab($event)" tab-min-height="28">
+	<tab *ngFor="let tab of desktop.desk.tabs" [tabTitle]="tab.tabTitle" [ngClass]="{'max-height': tab.active, hide: !tab.active}" [active]="tab.active">
+		<controller-frame *ngFor="let controller of tab.widgets" initialize-ctrl="true" class="max-height float-left" [initial-tags]="controller.initialTags" style="margin-right: 7px;" [ngStyle]="{'width': controller.width || '25%'}"></controller-frame>
+		<div *ngFor="let row of tab.rows" class="row flex-container-row float-left" style="padding-left: 20px;" [ngStyle]="{'width': row.width || '100%', 'height': 100/tab.rows.length + '%'}">
+			<controller-frame *ngFor="let controller of row.widgets" initialize-ctrl="true" class="max-height" [initial-tags]="controller.initialTags" [ngStyle]="{'width': 'calc(' + 100/row.widgets.length + '% - 7px)', 'margin-right': '7px'}"></controller-frame>
+		</div>
+	</tab>
+	<tab [menu]="desktop.tabs"></tab>
+</tabs>
