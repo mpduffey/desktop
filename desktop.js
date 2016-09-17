@@ -12,18 +12,28 @@ var core_1 = require('@angular/core');
 var widget_1 = require('components/widget/widget');
 var tabs_1 = require('components/tabs/tabs');
 var controller_frame_1 = require('components/controller/controller-frame');
-var dropdown_menu_1 = require('components/dropdown-menu/dropdown-menu');
+var ng2_bs3_modal_1 = require('ng2-bs3-modal/ng2-bs3-modal');
 var desktop_service_1 = require('components/desktop/desktop.service');
 var Desktop = (function () {
     function Desktop(cd, desktop) {
         this.cd = cd;
         this.desktop = desktop;
     }
+    Desktop.prototype.close = function () {
+        this.modal.close();
+    };
+    Desktop.prototype.open = function () {
+        this.modal.open();
+    };
+    __decorate([
+        core_1.ViewChild('modal'), 
+        __metadata('design:type', ng2_bs3_modal_1.ModalComponent)
+    ], Desktop.prototype, "modal", void 0);
     Desktop = __decorate([
         core_1.Component({
             selector: 'desktop',
             templateUrl: '/app/components/desktop/desktop.html',
-            directives: [widget_1.Widget, tabs_1.Tab, tabs_1.Tabs, controller_frame_1.ControllerFrame, dropdown_menu_1.Menu],
+            directives: [widget_1.Widget, tabs_1.Tab, tabs_1.Tabs, controller_frame_1.ControllerFrame, ng2_bs3_modal_1.MODAL_DIRECTIVES],
             providers: [desktop_service_1.DesktopService]
         }), 
         __metadata('design:paramtypes', [core_1.ChangeDetectorRef, (typeof (_a = typeof desktop_service_1.DesktopService !== 'undefined' && desktop_service_1.DesktopService) === 'function' && _a) || Object])

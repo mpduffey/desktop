@@ -64,7 +64,7 @@ export class DesktopService {
 		{
 			tabTitle:			"New Tab",
 			active:				false,
-			widgets:		[
+			widgets:			[
 				{
 					type:					"controller",
 					widgetTitle:	"Controller 1",
@@ -116,6 +116,56 @@ export class DesktopService {
 							widgetTitle:	"Controller 6",
 							initialClass:	"Objective",
 							initialTags:	[]
+						},
+					]
+				}
+			]
+		},
+		{
+			tabTitle:			"Overall",
+			active:				false,
+			rows:					[
+				{
+					widgets:		[
+						{
+							type:					"controller",
+							widgetTitle:	"Controller 1",
+							initialClass:	"Objective",
+							initialTags:	[11051,14608]
+						},
+						{
+							type:					"controller",
+							widgetTitle:	"Controller 2",
+							initialClass:	"Objective",
+							initialTags:	[11051,9120]
+						},
+						{
+							type:					"controller",
+							widgetTitle:	"Controller 3",
+							initialClass:	"Objective",
+							initialTags:	[11051,2221]
+						}
+					]
+				},
+				{
+					widgets:		[
+						{
+							type:					"controller",
+							widgetTitle:	"Controller 4",
+							initialClass:	"Objective",
+							initialTags:	[46]
+						},
+						{
+							type:					"controller",
+							widgetTitle:	"Controller 5",
+							initialClass:	"Objective",
+							initialTags:	[13]
+						},
+						{
+							type:					"controller",
+							widgetTitle:	"Controller 6",
+							initialClass:	"Objective",
+							initialTags:	[11051]
 						},
 					]
 				}
@@ -578,76 +628,108 @@ export class DesktopService {
 			]
 		},
 		{
-			tabTitle:			"Staff Actions",
+			tabTitle:			"RPW Staff Actions",
 			active:				false,
-			rows:					[
+			columns:			[
 				{
-					widgets:		[
+					height:				'100%',
+					width:				'25%',
+					rows:					[
 						{
-							type:					"controller",
-							widgetTitle:	"Controller 1",
-							initialClass:	"Objective",
-							initialTags:	[14128,11051,17969]
+							widgets:			[
+								{
+									type:					"controller",
+									widgetTitle:	"Controller 1",
+									initialClass:	"Objective",
+									initialTags:	[11051,14128,14608]
+								}
+							]
 						},
 						{
-							type:					"controller",
-							widgetTitle:	"Controller 2",
-							initialClass:	"Objective",
-							initialTags:	[14128,11051,14657]
-						},
-						{
-							type:					"controller",
-							widgetTitle:	"Controller 3",
-							initialClass:	"Objective",
-							initialTags:	[14128,11051,17970]
-						}
-					]
-				},
-				{
-					widgets:		[
-						{
-							type:					"controller",
-							widgetTitle:	"Controller 4",
-							initialClass:	"Objective",
-							initialTags:	[14128,11051,14481]
-						},
-						{
-							type:					"controller",
-							widgetTitle:	"Controller 5",
-							initialClass:	"Objective",
-							initialTags:	[14128,11051,14480]
-						},
-						{
-							type:					"controller",
-							widgetTitle:	"Controller 6",
-							initialClass:	"Objective",
-							initialTags:	[14128,11051,14642]
+							widgets:			[
+								{
+									type:					"controller",
+									widgetTitle:	"Controller 1",
+									initialClass:	"Objective",
+									initialTags:	[14128,46]
+								}
+							]
 						},
 					]
 				},
 				{
-					widgets:		[
+					height:				'100%',
+					width:				'75%',
+					rows:					[
 						{
-							type:					"controller",
-							widgetTitle:	"Controller 1",
-							initialClass:	"Objective",
-							initialTags:	[14128,11051,17971]
+							widgets:		[
+								{
+									type:					"controller",
+									widgetTitle:	"Controller 1",
+									initialClass:	"Objective",
+									initialTags:	[14128,11051,17969]
+								},
+								{
+									type:					"controller",
+									widgetTitle:	"Controller 2",
+									initialClass:	"Objective",
+									initialTags:	[14128,11051,14657]
+								},
+								{
+									type:					"controller",
+									widgetTitle:	"Controller 3",
+									initialClass:	"Objective",
+									initialTags:	[14128,11051,17970]
+								}
+							]
 						},
 						{
-							type:					"controller",
-							widgetTitle:	"Controller 2",
-							initialClass:	"Objective",
-							initialTags:	[14128,11051,14846]
+							widgets:		[
+								{
+									type:					"controller",
+									widgetTitle:	"Controller 4",
+									initialClass:	"Objective",
+									initialTags:	[14128,11051,14481]
+								},
+								{
+									type:					"controller",
+									widgetTitle:	"Controller 5",
+									initialClass:	"Objective",
+									initialTags:	[14128,11051,14480]
+								},
+								{
+									type:					"controller",
+									widgetTitle:	"Controller 6",
+									initialClass:	"Objective",
+									initialTags:	[14128,11051,14642]
+								},
+							]
 						},
 						{
-							type:					"controller",
-							widgetTitle:	"Controller 3",
-							initialClass:	"Objective",
-							initialTags:	[14128,11051,14488]
-						}
+							widgets:		[
+								{
+									type:					"controller",
+									widgetTitle:	"Controller 1",
+									initialClass:	"Objective",
+									initialTags:	[14128,11051,17971]
+								},
+								{
+									type:					"controller",
+									widgetTitle:	"Controller 2",
+									initialClass:	"Objective",
+									initialTags:	[14128,11051,14846]
+								},
+								{
+									type:					"controller",
+									widgetTitle:	"Controller 3",
+									initialClass:	"Objective",
+									initialTags:	[14128,11051,14488]
+								}
+							]
+						},
 					]
-				},
-			]
+				}
+			],
 		},
 		{
 			tabTitle:			"Staff Projects",
@@ -1747,5 +1829,13 @@ export class DesktopService {
 		};
 		console.log(tab);
 		// this.pushTab();
+	}
+	addCtrl = (arr) => {
+		arr.push({
+			type:					"controller",
+			widgetTitle:	"Controller 1",
+			initialClass:	"Objective",
+			initialTags:	[4611,11051,14608]
+		});
 	}
 }
